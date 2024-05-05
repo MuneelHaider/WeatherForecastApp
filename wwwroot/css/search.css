@@ -1,0 +1,83 @@
+﻿/* Base styles for the search page */
+.search-container {
+    text-align: center;
+    padding: 20px;
+    background-color: #f0f8ff; /* Light blue background */
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+    .search-container:hover {
+        transform: scale(1.05); /* Slight scale effect on hover */
+    }
+
+.search-input {
+    padding: 8px 15px;
+    margin-right: 10px;
+    border-radius: 4px;
+    border: 1px solid #cceeff; /* Adjusted light blue border for better visibility */
+    background-color: #e6f7ff; /* Lighter blue to stand out */
+    transition: all 0.3s ease-in-out;
+    width: 70%; /* Ensuring input field is adequately wide */
+}
+
+    .search-input:focus {
+        border-color: #66afe9; /* Blue border on focus */
+        box-shadow: 0 0 8px rgba(102, 175, 233, 0.6);
+    }
+
+.search-button {
+    padding: 10px 20px;
+    background-color: #007bff; /* Bootstrap primary blue */
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+    .search-button:hover {
+        background-color: #0056b3; /* Darker blue on hover */
+    }
+
+/* Layout adjustments for city weather display and forecast */
+.results-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: auto;
+}
+
+.weather-card, .forecast-card {
+    width: 80%; /* Adjusting width for better alignment */
+    padding: 20px;
+    background-color: #ffffff; /* White background for the content cards */
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 10px auto; /* Centering cards */
+    text-align: center;
+}
+
+.forecast-card {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.forecast-day {
+    flex-basis: 18%; /* Adjusting for responsiveness */
+    margin: 10px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .weather-card, .forecast-card {
+        width: 95%; /* Full width on smaller screens */
+    }
+
+    .forecast-day {
+        flex-basis: 48%; /* Adjust for smaller screens */
+    }
+}
