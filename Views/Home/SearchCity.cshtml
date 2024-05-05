@@ -33,7 +33,7 @@
     <script>
         function fetchWeather() {
             const city = document.getElementById('cityInput').value;
-            const apiKey = '9b7b2ba2f0ec4d89a48c410cc6179f2a'; // Your API key
+            const apiKey = '9b7b2ba2f0ec4d89a48c410cc6179f2a'; 
             const apiUrl = `https://api.weatherbit.io/v2.0/current?city=${city}&key=${apiKey}&units=M`;
 
             fetch(apiUrl)
@@ -60,7 +60,7 @@
             fetch(forecastUrl)
                 .then(response => response.json())
                 .then(data => {
-                    const forecastData = data.data.slice(0, 5);  // Get the first 5 days of forecast
+                    const forecastData = data.data.slice(0, 5);  
                     let forecastHtml = `<h1>5-Day Forecast for ${city}</h1><div class="forecast-grid">`;
                     forecastData.forEach(day => {
                         forecastHtml += `<div class="forecast-card">

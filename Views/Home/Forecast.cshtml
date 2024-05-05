@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/css/bootstrap.min.css">
-    <link rel="stylesheet" href="~/css/forecast.css"> <!-- Link to your forecast.css -->
+    <link rel="stylesheet" href="~/css/site.css">
+    <link rel="stylesheet" href="~/css/forecast.css">
     <title>@ViewData["Title"]</title>
 </head>
 <body onload="getLocation()">
@@ -68,7 +69,7 @@
 
         function displayForecast(forecastData) {
             const forecastContainer = document.getElementById("forecast-container");
-            forecastContainer.innerHTML = ""; // Clear previous forecast data
+            forecastContainer.innerHTML = "";
 
             forecastData.forEach(day => {
                 const forecastItem = document.createElement("div");
